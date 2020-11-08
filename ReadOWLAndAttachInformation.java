@@ -344,7 +344,7 @@ public class ReadOWLAndAttachInformation {
 		//a.ReadOWL();
 		
 		
-		String data = "/Users/gerhard/tryOntology.owl";
+		String data = "definingOntology.owl;
 		File initialFile = new File(data);
 	    InputStream targetStream = new FileInputStream(initialFile);
 	    System.out.println("Testcase 1 - lot's of entries");
