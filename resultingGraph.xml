@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="urn:webprotege:ontology:1a0a9908-1859-4481-b6df-4d1e70b1581b#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<rdf:Description rdf:about="urn:webprotege:ontology:1a0a9908-1859-4481-b6df-4d1e70b1581b">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/hasMedication">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Patient"/>
+	<rdfs:range rdf:resource="http://dmre/Medication"/>
+	<rdfs:label>hasMedication</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/hasObservation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Patient"/>
+	<rdfs:range rdf:resource="http://dmre/Observation"/>
+	<rdfs:label>hasObservation</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/id">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Medication"/>
+	<rdfs:domain rdf:resource="http://dmre/Observation"/>
+	<rdfs:domain rdf:resource="http://dmre/Patient"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:label>id</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/name(0).family">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Patient"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:label>name(0).family</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/valueQuantity.value">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Observation"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:label>value</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/valueQuantity.unit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+	<rdfs:domain rdf:resource="http://dmre/Observation"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:label>unit</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/Medication">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Medication</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/Observation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Observation</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dmre/Patient">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Patient</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://hapi.fhir.org/baseR4/Observation/1567077/_history/1">
+	<rdf:type rdf:resource="http://dmre/Observation"/>
+	<id xmlns="http://dmre/">1567077</id>
+	<valueQuantity.value xmlns="http://dmre/">6.3</valueQuantity.value>
+	<valueQuantity.unit xmlns="http://dmre/">mmol/l</valueQuantity.unit>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://hapi.fhir.org/baseR4/Patient/1567076/_history/1">
+	<rdf:type rdf:resource="http://dmre/Patient"/>
+	<id xmlns="http://dmre/">1567076</id>
+	<family xmlns="http://dmre/name(0).">Chalmers</family>
+</rdf:Description>
+
+</rdf:RDF>
